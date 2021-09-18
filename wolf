@@ -1,0 +1,21 @@
+##start code##
+clear
+##install package## 
+apt-get install tar -y
+apt install tar -y
+pkg install tar -y
+apt-get install proot -y
+apt install proot -y
+pkg install proot -y
+##clear log##
+clear
+##wait##
+printf "wait just 35mins for downloading and existing don't close yor termux!"
+##downloading tar.xz file##
+axel ${EXTRA_ARGS} --alternate "https://drive.google.com/file/d/1-FaHG0PBjK9mFkiMJh-1h4wwjaCQTEMo/view?usp=drivesdk"
+##existing tar.xz file##
+proot --link2symlink tar -xf wolf-os.tar.xz 2> /dev/null || :
+##setup quick start command##
+cp -r w /data/data/com.termux/files/usr/bin
+##end code##
+printf "now you can lunch os just type command "w" try it"
